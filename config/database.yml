@@ -1,0 +1,17 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  host: multi-containers.cbrbcsfsvnid.eu-central-1.rds.amazonaws.com
+  username: multi_containers  
+  password: multi-containers  
+  database: multi_containers  
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default
